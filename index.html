@@ -219,6 +219,21 @@
   .t-name{font-size:13px;font-weight:700;color:#fff;}
   .t-loc{font-size:12.5px;color:#aab8a0;}
 
+  /* GALLERY */
+  .gallery{padding:54px 0;background:#f6f9f2;}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .gallery-grid img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+  }
+
   /* BENEFITS */
   .benefits{padding:54px 0;background:#fff;}
   .section-head{text-align:center;max-width:640px;margin:0 auto 36px;}
@@ -343,6 +358,8 @@
     .hero-stars{justify-content:flex-start;}
     .hero-badges{justify-content:flex-start;}
     .testimonials{grid-template-columns:repeat(3,1fr);}
+    .gallery-grid{grid-template-columns:repeat(4,1fr);}
+    .gallery-grid img{height:170px;}
     .benefit-grid{grid-template-columns:repeat(3,1fr);}
     .steps{grid-template-columns:repeat(3,1fr);}
     .nav-logo img{height:48px;}
@@ -481,6 +498,25 @@
         <h3>HomeAdvisor&reg; Elite Service Award</h3>
         <p>Consistently top-rated for professionalism, communication, and quality of work.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recent Siding Projects</h2>
+      <p>A look at real homes transformed with premium James Hardie siding.</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="assets/gallery-1-iron-gray.webp" alt="Home with James Hardie Iron Gray lap siding and Arctic White trim" loading="lazy">
+      <img src="assets/gallery-2-evening-blue.webp" alt="Home with James Hardie Evening Blue lap siding and Arctic White trim" loading="lazy">
+      <img src="assets/gallery-3-cobble-stone.webp" alt="Home with James Hardie Cobble Stone straight-edge shingle and Arctic White trim" loading="lazy">
+      <img src="assets/gallery-4-house1.avif" alt="House with James Hardie siding" loading="lazy">
+      <img src="assets/gallery-5-house2.avif" alt="House with James Hardie siding" loading="lazy">
+      <img src="assets/gallery-6.webp" alt="Completed siding replacement project" loading="lazy">
+      <img src="assets/gallery-7.webp" alt="Completed siding replacement project" loading="lazy">
+      <img src="assets/gallery-8-minneapolis.webp" alt="Siding contractors project in Minneapolis, MN" loading="lazy">
     </div>
   </div>
 </section>
