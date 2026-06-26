@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almost Done — Get Your Free Siding Estimate | DaBella</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#132B0B;
+    --accent:#AFE12E;
+    --neutral:#ffffff;
+    --ink:#1a1f17;
+    --gray:#5b6358;
+    --line:#e3e8de;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'DM Sans',sans-serif;
+    color:var(--ink);
+    background:#f6f9f2;
+    font-size:16px;
+    line-height:1.5;
+    min-height:100vh;
+  }
+  h1,h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;line-height:1.1;}
+  img{max-width:100%;display:block;}
+  .container{max-width:560px;margin:0 auto;padding:0 20px;}
+
+  .nav{
+    background:var(--primary);
+    border-bottom:3px solid var(--accent);
+    padding:12px 20px;
+    display:flex;justify-content:center;
+  }
+  .nav img{height:42px;}
+
+  .progress-wrap{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:14px 20px;
+  }
+  .progress-label{
+    display:flex;justify-content:space-between;
+    font-size:13px;font-weight:700;color:var(--primary);
+    max-width:560px;margin:0 auto 8px;
+  }
+  .progress-bar{
+    max-width:560px;margin:0 auto;
+    height:8px;background:var(--line);border-radius:999px;overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;width:75%;background:var(--accent);border-radius:999px;
+    transition:width .4s ease;
+  }
+
+  main{padding:36px 0 60px;}
+  .head{text-align:center;margin-bottom:24px;}
+  .head h1{font-size:clamp(26px,6vw,34px);color:var(--primary);}
+  .head p{color:var(--gray);margin-top:10px;font-size:15.5px;}
+
+  .form-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:24px 20px 28px;
+    box-shadow:0 12px 30px rgba(19,43,11,.1);
+  }
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--ink);
+  }
+  .field input{
+    width:100%;
+    border:2px solid var(--line);
+    border-radius:10px;
+    padding:13px 14px;
+    font-size:16px;
+    font-family:inherit;
+    min-height:48px;
+  }
+  .field input:focus{outline:none;border-color:var(--primary);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+
+  .cta-btn{
+    display:block;width:100%;
+    background:var(--accent);color:var(--primary);
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;text-transform:uppercase;
+    font-size:18px;letter-spacing:.4px;
+    border:none;border-radius:10px;
+    padding:17px 18px;min-height:54px;
+    cursor:pointer;margin-top:8px;
+    box-shadow:0 8px 18px rgba(175,225,46,.35);
+  }
+
+  .trust-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
+    margin-top:18px;
+  }
+  .trust-row .item{
+    display:flex;align-items:center;gap:6px;
+    font-size:12.5px;color:var(--gray);font-weight:600;
+  }
+  .trust-row svg{width:16px;height:16px;color:var(--primary);flex-shrink:0;}
+
+  .summary{
+    background:#f3f9ec;
+    border:1px solid #d7ecc0;
+    border-radius:10px;
+    padding:12px 14px;
+    margin-bottom:20px;
+    font-size:13px;
+    color:var(--primary);
+  }
+  .summary strong{display:block;margin-bottom:4px;font-size:13px;}
+
+  #thankyou{
+    display:none;
+    text-align:center;
+    background:#fff;
+    border-radius:var(--radius);
+    padding:40px 24px;
+    box-shadow:0 12px 30px rgba(19,43,11,.1);
+  }
+  #thankyou .check{
+    width:64px;height:64px;border-radius:50%;
+    background:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 18px;
+  }
+  #thankyou .check svg{width:32px;height:32px;color:var(--accent);}
+  #thankyou h2{color:var(--primary);font-size:26px;margin-bottom:10px;}
+  #thankyou p{color:var(--gray);font-size:15px;}
+
+  @media (min-width:600px){
+    .row2{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <img src="assets/logo-white.png" alt="DaBella logo">
+</nav>
+
+<div class="progress-wrap">
+  <div class="progress-label">
+    <span>Step 2 of 2</span>
+    <span>Almost done!</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+</div>
+
+<main>
+  <div class="container">
+
+    <div id="formStage">
+      <div class="head">
+        <h1>Great! Last Step — Get Your Free Price Estimate</h1>
+        <p>Your info is 100% confidential. A DaBella specialist will reach out within 24 hours.</p>
+      </div>
+
+      <div class="summary" id="answerSummary" style="display:none;">
+        <strong>Your Project</strong>
+        <span id="summaryText"></span>
+      </div>
+
+      <div class="form-card">
+        <!-- SWAP: Replace form action with your CRM webhook URL -->
+        <form id="step2Form" action="#thank-you" method="GET">
+          <div class="row2">
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <!-- Hidden fields populated from Step 1 URL params -->
+          <input type="hidden" id="hServie" name="service" value="">
+          <input type="hidden" id="hTimeline" name="timeline" value="">
+          <input type="hidden" id="hHomeowner" name="homeowner" value="">
+
+          <button type="submit" class="cta-btn">Get My Free Price Estimate &rarr;</button>
+
+          <div class="trust-row">
+            <div class="item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Secured &amp; Confidential
+            </div>
+            <div class="item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+              No Obligation
+            </div>
+            <div class="item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              BBB Accredited
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="thankyou">
+      <div class="check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>You're All Set!</h2>
+      <p>Thanks for reaching out. A DaBella siding specialist will contact you within 24 hours to schedule your free estimate.</p>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  // Populate hidden fields + summary from Step 1 URL params
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var service = params.get('service') || '';
+    var timeline = params.get('timeline') || '';
+    var homeowner = params.get('homeowner') || '';
+
+    document.getElementById('hServie').value = service;
+    document.getElementById('hTimeline').value = timeline;
+    document.getElementById('hHomeowner').value = homeowner;
+
+    if(service || timeline || homeowner){
+      var parts = [];
+      if(service) parts.push(service);
+      if(timeline) parts.push(timeline);
+      if(homeowner) parts.push(homeowner === 'Yes' ? 'Homeowner' : 'Non-homeowner');
+      document.getElementById('summaryText').textContent = parts.join(' • ');
+      document.getElementById('answerSummary').style.display = 'block';
+    }
+  })();
+
+  // Handle final submit -> show thank-you (swap with real endpoint as needed)
+  document.getElementById('step2Form').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formStage').style.display = 'none';
+    document.getElementById('thankyou').style.display = 'block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>

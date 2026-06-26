@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10% Off Siding + No Payments for 12 Months | DaBella</title>
+<meta name="description" content="See if your home qualifies for 10% off new siding with no payments or interest for 12 months. Get your free price estimate in 2 minutes.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#132B0B;
+    --accent:#AFE12E;
+    --neutral:#ffffff;
+    --ink:#1a1f17;
+    --gray:#5b6358;
+    --line:#e3e8de;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans',sans-serif;
+    color:var(--ink);
+    background:var(--neutral);
+    font-size:16px;
+    line-height:1.5;
+  }
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:.2px;line-height:1.08;text-transform:uppercase;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .container{max-width:1180px;margin:0 auto;padding:0 20px;}
+  .visually-hidden{position:absolute;left:-9999px;}
+
+  /* NAV */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--primary);
+    border-bottom:3px solid var(--accent);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:center;
+    padding:10px 20px;max-width:1180px;margin:0 auto;
+  }
+  .nav-logo img{height:42px;width:auto;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(180deg, rgba(19,43,11,.88), rgba(19,43,11,.93)), url('assets/hero.jpg') center/cover no-repeat;
+    color:#fff;
+    padding:32px 0 40px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .hero-copy h1{
+    font-size:clamp(30px,7vw,46px);
+    color:#fff;
+  }
+  .hero-copy h1 .accent{color:var(--accent);}
+  .hero-sub{
+    margin-top:14px;
+    font-size:18px;
+    color:#dfe9d6;
+    max-width:520px;
+  }
+  .hero-stars{
+    margin-top:16px;
+    display:flex;align-items:center;gap:10px;
+    flex-wrap:wrap;
+  }
+  .stars{color:var(--accent);font-size:20px;letter-spacing:2px;}
+  .hero-stars span{font-size:14px;color:#cfd9c4;}
+
+  .form-card{
+    background:#fff;
+    color:var(--ink);
+    border-radius:var(--radius);
+    padding:22px 20px 26px;
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+  }
+  .form-card h2{
+    font-size:21px;
+    color:var(--primary);
+    margin-bottom:4px;
+  }
+  .form-card .form-sub{
+    font-size:14px;color:var(--gray);margin-bottom:16px;
+  }
+  .field{margin-bottom:16px;}
+  .field legend, .field label.q{
+    display:block;font-weight:700;font-size:15px;margin-bottom:8px;color:var(--ink);
+  }
+  .options{display:flex;flex-direction:column;gap:8px;}
+  .opt{
+    display:flex;align-items:center;gap:10px;
+    border:2px solid var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+    cursor:pointer;
+    transition:border-color .15s, background .15s;
+    min-height:44px;
+  }
+  .opt:hover{border-color:var(--accent);}
+  .opt input{accent-color:var(--primary);width:18px;height:18px;flex-shrink:0;}
+  .opt input:checked + span{font-weight:700;}
+  .opt:has(input:checked){
+    border-color:var(--primary);
+    background:#f3f9ec;
+  }
+  select.select-input{
+    width:100%;
+    border:2px solid var(--line);
+    border-radius:10px;
+    padding:13px 14px;
+    font-size:16px;
+    font-family:inherit;
+    background:#fff;
+    min-height:48px;
+  }
+  .cta-btn{
+    display:block;
+    width:100%;
+    background:var(--accent);
+    color:var(--primary);
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:18px;
+    letter-spacing:.4px;
+    border:none;
+    border-radius:10px;
+    padding:17px 18px;
+    min-height:54px;
+    cursor:pointer;
+    margin-top:6px;
+    box-shadow:0 8px 18px rgba(175,225,46,.35);
+    transition:transform .1s ease;
+  }
+  .cta-btn:hover{transform:translateY(-1px);}
+  .micro-trust{
+    text-align:center;
+    font-size:13px;
+    color:var(--gray);
+    margin-top:10px;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+  }
+  .micro-trust svg{width:14px;height:14px;flex-shrink:0;}
+
+  /* TRUST BAR */
+  .trustbar{
+    background:#fff;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .trustbar-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:14px 28px;
+    text-align:center;
+  }
+  .trust-item{
+    font-size:13.5px;
+    font-weight:700;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .trust-item svg{width:20px;height:20px;color:var(--accent);flex-shrink:0;}
+
+  /* SOCIAL PROOF STRIP */
+  .proof{
+    background:var(--primary);
+    color:#fff;
+    padding:48px 0;
+  }
+  .proof h2{
+    text-align:center;color:#fff;font-size:26px;margin-bottom:8px;
+  }
+  .proof-sub{text-align:center;color:#cfd9c4;margin-bottom:30px;font-size:15px;}
+  .testimonials{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  .t-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;
+    padding:20px;
+  }
+  .t-stars{color:var(--accent);font-size:16px;margin-bottom:10px;letter-spacing:2px;}
+  .t-quote{font-size:15px;color:#e7ede1;margin-bottom:12px;}
+  .t-name{font-size:13px;font-weight:700;color:#fff;}
+  .t-loc{font-size:12.5px;color:#aab8a0;}
+
+  /* BENEFITS */
+  .benefits{padding:54px 0;background:#fff;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 36px;}
+  .section-head h2{font-size:30px;color:var(--primary);}
+  .section-head p{color:var(--gray);margin-top:10px;font-size:15.5px;}
+  .benefit-grid{
+    display:grid;grid-template-columns:1fr;gap:22px;
+  }
+  .b-card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:24px 20px;
+    text-align:center;
+  }
+  .b-icon{
+    width:56px;height:56px;
+    background:var(--primary);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;
+  }
+  .b-icon svg{width:28px;height:28px;color:var(--accent);}
+  .b-card h3{
+    font-size:18px;color:var(--ink);margin-bottom:8px;text-transform:none;
+  }
+  .b-card p{font-size:14.5px;color:var(--gray);}
+
+  /* HOW IT WORKS */
+  .how{background:#f6f9f2;padding:54px 0;}
+  .steps{
+    display:grid;grid-template-columns:1fr;gap:28px;
+    position:relative;
+  }
+  .step{
+    text-align:center;
+    position:relative;
+  }
+  .step-num{
+    width:64px;height:64px;
+    background:var(--primary);color:var(--accent);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:28px;font-weight:800;
+    margin:0 auto 14px;
+  }
+  .step h3{font-size:17px;color:var(--primary);margin-bottom:6px;text-transform:none;}
+  .step p{font-size:14px;color:var(--gray);}
+
+  /* CTA BLOCK 2 */
+  .cta2{
+    background:var(--primary);
+    color:#fff;
+    padding:56px 0;
+    text-align:center;
+  }
+  .cta2 h2{color:#fff;font-size:30px;max-width:680px;margin:0 auto;}
+  .cta2 .accent{color:var(--accent);}
+  .cta2 p{color:#cfd9c4;margin-top:12px;font-size:16px;}
+  .cta2-btn{
+    display:inline-block;
+    margin-top:24px;
+    background:var(--accent);
+    color:var(--primary);
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;text-transform:uppercase;
+    font-size:18px;letter-spacing:.4px;
+    padding:18px 36px;border-radius:10px;
+    text-decoration:none;
+    min-height:54px;
+    box-shadow:0 8px 18px rgba(175,225,46,.3);
+  }
+
+  /* FAQ */
+  .faq{padding:54px 0;background:#fff;}
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    padding:18px 0;
+    font-size:16px;
+    font-weight:700;
+    color:var(--ink);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-family:inherit;
+    min-height:44px;
+  }
+  .faq-q .plus{font-size:22px;color:var(--primary);transition:transform .2s;flex-shrink:0;margin-left:12px;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .25s ease;
+    font-size:14.5px;color:var(--gray);
+  }
+  .faq-a-inner{padding:0 0 18px;}
+  .faq-item.open .faq-a{max-height:300px;}
+
+  /* FOOTER */
+  footer{
+    background:var(--primary);
+    color:#cfd9c4;
+    padding:32px 0 24px;
+    text-align:center;
+    font-size:13px;
+  }
+  footer img{height:34px;margin:0 auto 14px;}
+  footer .f-links{margin-top:10px;}
+  footer .f-links a{text-decoration:underline;color:#cfd9c4;}
+  footer .f-copy{margin-top:14px;color:#8ea283;}
+
+  @media (min-width:860px){
+    .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;}
+    .testimonials{grid-template-columns:repeat(3,1fr);}
+    .benefit-grid{grid-template-columns:repeat(3,1fr);}
+    .steps{grid-template-columns:repeat(3,1fr);}
+    .nav-logo img{height:48px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="DaBella Home">
+      <img src="assets/logo-white.png" alt="DaBella logo">
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <!-- HEADLINE: Match this to your ad headline for Message Match -->
+      <h1>Tired Of Old, Damaged Siding? <span class="accent">Get 10% Off</span> A Full Replacement.</h1>
+      <p class="hero-sub">No payments and no interest for 12 months. Free, no-obligation price estimate — takes about 2 minutes.</p>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span>Thousands of 5-Star Reviews &middot; Angie's List Super Service &middot; HomeAdvisor Elite Service</span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Answer 3 Quick Questions To Get Started</h2>
+      <p class="form-sub">Takes less than 60 seconds.</p>
+      <form id="step1Form" action="step2.html" method="GET">
+        <fieldset class="field">
+          <legend class="q">What service do you need?</legend>
+          <div class="options">
+            <label class="opt"><input type="radio" name="service" value="New Siding" required><span>New Siding Installation</span></label>
+            <label class="opt"><input type="radio" name="service" value="Siding Repair"><span>Siding Repair</span></label>
+            <label class="opt"><input type="radio" name="service" value="Not Sure"><span>Not Sure — Need An Expert Opinion</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend class="q">How soon do you need this done?</legend>
+          <div class="options">
+            <label class="opt"><input type="radio" name="timeline" value="ASAP" required><span>As Soon As Possible</span></label>
+            <label class="opt"><input type="radio" name="timeline" value="1-3 Months"><span>Within 1–3 Months</span></label>
+            <label class="opt"><input type="radio" name="timeline" value="Just Researching"><span>Just Researching Options</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="q" for="homeOwner">Do you own your home?</label>
+          <select id="homeOwner" name="homeowner" class="select-input" required>
+            <option value="" disabled selected>Select an answer</option>
+            <option value="Yes">Yes, I own my home</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <button type="submit" class="cta-btn">Get My Free Price Estimate &rarr;</button>
+        <div class="micro-trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          No commitment. 100% confidential.
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="trustbar">
+  <div class="container trustbar-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>
+      James Hardie Elite Preferred&reg; Contractor
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 6 22l6-3 6 3-2.5-8"/></svg>
+      Alside&reg; Dealers of Distinction Award
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      HomeAdvisor&reg; Elite Service Award
+    </div>
+  </div>
+</div>
+
+<section class="proof">
+  <div class="container">
+    <h2>What Homeowners Are Saying</h2>
+    <p class="proof-sub">★★★★★ Thousands of 5-Star Reviews</p>
+    <div class="testimonials">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"The crew was professional and the new siding completely transformed our home. The financing made it easy to say yes."</p>
+        <div class="t-name">— Jane D.</div>
+        <div class="t-loc">Portland, OR</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"From the free estimate to the final walkthrough, everything was smooth. No pressure, just honest pricing."</p>
+        <div class="t-name">— Mike R.</div>
+        <div class="t-loc">Boise, ID</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"10% off plus no payments for a year was the deal that got us off the fence. Couldn't be happier with the results."</p>
+        <div class="t-name">— Carla S.</div>
+        <div class="t-loc">Salt Lake City, UT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <div class="section-head">
+      <h2>Why Homeowners Choose DaBella</h2>
+      <p>Award-winning craftsmanship backed by the brands you trust.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="b-card">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></div>
+        <h3>James Hardie Elite Preferred&reg; Contractor</h3>
+        <p>Recognized for top-tier installation quality and customer satisfaction on premium siding products.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14 6 22l6-3 6 3-2.5-8"/><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div>
+        <h3>Alside&reg; Dealers of Distinction Award</h3>
+        <p>One of an elite group of dealers nationally recognized for excellence in siding installation.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27 18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+        <h3>HomeAdvisor&reg; Elite Service Award</h3>
+        <p>Consistently top-rated for professionalism, communication, and quality of work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <div class="section-head">
+      <h2>How It Works</h2>
+      <p>Getting your free estimate is simple.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Answer A Few Questions</h3>
+        <p>Tell us about your project in under a minute.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Review Your Details</h3>
+        <p>A local siding specialist looks over your answers.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Get Your Free Estimate</h3>
+        <p>We'll reach out to schedule your free, no-obligation quote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta2">
+  <div class="container">
+    <h2>Don't Wait For Small Damage To Become A <span class="accent">Big Problem.</span></h2>
+    <p>Lock in 10% off and 12 months with no payments or interest — limited-time offer.</p>
+    <a href="#step1Form" class="cta2-btn">Get My Free Estimate &rarr;</a>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head">
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How much does new siding cost? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Cost depends on your home's size, material choice, and condition. That's why we offer a free, no-obligation estimate tailored to your home.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does the 10% off and 12-month no-payment offer work? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Qualified homeowners receive 10% off the total project cost and can finance the remainder with no payments or interest for the first 12 months. Terms reviewed during your free estimate.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does a siding replacement take? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Most residential siding projects are completed within a few days to a week, depending on home size and material.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What areas do you serve? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">DaBella serves homeowners across multiple states nationwide. Fill out the form above and we'll confirm availability in your area.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is the estimate really free? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. There is no cost and no obligation to move forward after receiving your estimate.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo-white.png" alt="DaBella logo">
+  <div class="f-links"><a href="#">Privacy Policy</a></div>
+  <div class="f-copy">&copy; 2026 DaBella. All rights reserved.</div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
+  });
+
+  // Step 1 form -> append params and go to step2
+  document.getElementById('step1Form').addEventListener('submit', function(e){
+    // Native GET submission already appends params to action URL; no extra JS needed.
+  });
+</script>
+
+</body>
+</html>
