@@ -170,8 +170,9 @@
     font-size:14px;color:var(--gray);margin-bottom:16px;
   }
   .field{margin-bottom:16px;}
+  fieldset.field{border:none;padding:0;margin:0 0 16px;}
   .field legend, .field label.q{
-    display:block;font-weight:700;font-size:15px;margin-bottom:8px;color:var(--ink);
+    display:block;font-weight:700;font-size:15px;margin-bottom:8px;color:var(--ink);padding:0;
   }
   .options{display:flex;flex-direction:column;gap:8px;}
   .opt{
@@ -413,7 +414,7 @@
   @media (min-width:860px){
     .hero{padding:72px 0 88px;min-height:680px;display:flex;align-items:center;}
     .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;width:100%;}
-    .hero-copy h1{font-size:clamp(38px,5.2vw,58px);}
+    .hero-copy h1{font-size:clamp(32px,3.9vw,42px);white-space:nowrap;}
     .hero-sub{font-size:20px;}
     .hero-copy{text-align:left;}
     .hero-sub{margin-left:0;margin-right:0;}
