@@ -411,7 +411,10 @@
   footer .f-copy{margin-top:14px;color:#8ea283;}
 
   @media (min-width:860px){
-    .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;}
+    .hero{padding:72px 0 88px;min-height:680px;display:flex;align-items:center;}
+    .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;width:100%;}
+    .hero-copy h1{font-size:clamp(38px,5.2vw,58px);}
+    .hero-sub{font-size:20px;}
     .hero-copy{text-align:left;}
     .hero-sub{margin-left:0;margin-right:0;}
     .hero-stars{justify-content:flex-start;}
