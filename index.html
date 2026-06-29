@@ -789,7 +789,7 @@
       panels.forEach(function(panel){
         panel.classList.toggle('active', parseInt(panel.dataset.step) === n);
       });
-      var pct = Math.round((n / totalSteps) * 100);
+      var pct = (n === totalSteps) ? 90 : Math.round((n / totalSteps) * 100);
       stepLabel.textContent = 'Step ' + n + ' of ' + totalSteps;
       stepPercent.textContent = pct + '%';
       progressFill.style.width = pct + '%';
