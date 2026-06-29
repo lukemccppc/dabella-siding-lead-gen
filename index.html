@@ -279,6 +279,33 @@
   .t-name{font-size:13px;font-weight:700;color:#fff;}
   .t-loc{font-size:12.5px;color:#aab8a0;}
 
+  /* TRANSFORM MARQUEE */
+  .transform{padding:48px 0 54px;background:#fff;overflow:hidden;}
+  .transform .section-head{margin-bottom:28px;}
+  .marquee{
+    width:100%;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #fff 6%, #fff 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #fff 6%, #fff 94%, transparent);
+  }
+  .marquee-track{
+    display:flex;
+    width:max-content;
+    animation:marquee-scroll 32s linear infinite;
+  }
+  .marquee-track img{
+    height:160px;
+    width:auto;
+    object-fit:cover;
+    border-radius:12px;
+    margin-right:14px;
+    flex-shrink:0;
+  }
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+
   /* GALLERY */
   .gallery{padding:54px 0;background:#f6f9f2;}
   .gallery-grid{
@@ -423,6 +450,7 @@
     .testimonials{grid-template-columns:repeat(3,1fr);}
     .gallery-grid{grid-template-columns:repeat(4,1fr);}
     .gallery-grid img{height:170px;}
+    .marquee-track img{height:260px;}
     .benefit-grid{grid-template-columns:repeat(3,1fr);}
     .steps{grid-template-columns:repeat(3,1fr);}
     .nav-logo img{height:48px;}
@@ -562,6 +590,28 @@
     </div>
   </div>
 </div>
+
+<section class="transform">
+  <div class="container section-head">
+    <h2>Transform Your Home With DaBella</h2>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <img src="assets/transform-slide-1.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-2.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-3.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-4.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-5.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-6.webp" alt="Home transformed by DaBella" loading="lazy">
+      <img src="assets/transform-slide-1.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+      <img src="assets/transform-slide-2.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+      <img src="assets/transform-slide-3.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+      <img src="assets/transform-slide-4.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+      <img src="assets/transform-slide-5.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+      <img src="assets/transform-slide-6.webp" alt="Home transformed by DaBella" loading="lazy" aria-hidden="true">
+    </div>
+  </div>
+</section>
 
 <section class="proof">
   <div class="container">
