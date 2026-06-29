@@ -61,7 +61,7 @@
     text-align:center;
   }
   .hero-copy h1{
-    font-size:clamp(30px,7vw,46px);
+    font-size:clamp(34.5px,8.05vw,53px);
     color:#fff;
   }
   .hero-copy h1 .accent{color:var(--accent);}
@@ -232,6 +232,7 @@
 
   /* TRUST BAR */
   .trustbar{
+    display:none;
     background:#fff;
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
@@ -291,7 +292,7 @@
   .marquee-track{
     display:flex;
     width:max-content;
-    animation:marquee-scroll 32s linear infinite;
+    animation:marquee-scroll 20s linear infinite;
   }
   .marquee-track img{
     height:160px;
@@ -451,6 +452,8 @@
     .gallery-grid{grid-template-columns:repeat(4,1fr);}
     .gallery-grid img{height:170px;}
     .marquee-track img{height:260px;}
+    .marquee-track{animation-duration:32s;}
+    .trustbar{display:block;}
     .benefit-grid{grid-template-columns:repeat(3,1fr);}
     .steps{grid-template-columns:repeat(3,1fr);}
     .nav-logo img{height:48px;}
@@ -472,7 +475,7 @@
     <div class="hero-copy">
       <!-- HEADLINE: Match this to your ad headline for Message Match -->
       <h1>Old Or Damaged Siding?<br><span class="accent">Get 10% Off</span> A Full Replacement</h1>
-      <p class="hero-sub">No payments and no interest for 12 months. Free, no-obligation price estimate — takes less than a minute.</p>
+      <p class="hero-sub">Plus no payments or interest for 12 months</p>
       <div class="hero-badges">
         <img src="assets/badge-homeadvisor.webp" alt="HomeAdvisor Top Rated">
         <img src="assets/badge-ssa.avif" alt="Super Service Award 2024">
