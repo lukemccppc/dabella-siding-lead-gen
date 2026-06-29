@@ -754,7 +754,13 @@
     });
 
     backBtn.addEventListener('click', function(){
-      if(currentStep > 1){ showStep(currentStep - 1); }
+      if(currentStep > 1){
+        var prevStep = currentStep - 1;
+        panelFor(prevStep).querySelectorAll('input[type="radio"]:checked').forEach(function(input){
+          input.checked = false;
+        });
+        showStep(prevStep);
+      }
     });
 
     form.addEventListener('submit', function(e){
