@@ -44,14 +44,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* NAV */
   .nav{
     position:sticky;top:0;z-index:50;
-    background:var(--primary);
-    border-bottom:3px solid var(--accent);
+    background:#fff;
+    border-bottom:1px solid #e3e8de;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
   }
   .nav-inner{
     display:flex;align-items:center;justify-content:center;
     padding:10px 20px;max-width:1180px;margin:0 auto;
   }
   .nav-logo img{height:42px;width:auto;}
+  .nav-serving{
+    display:none;
+    align-items:center;gap:8px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    padding:9px 16px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .nav-serving svg{width:14px;height:14px;flex-shrink:0;fill:#fff;}
   .nav-cta{
     display:none;
     background:var(--accent);
@@ -444,6 +460,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .benefit-grid{grid-template-columns:repeat(3,1fr);}
     .steps{grid-template-columns:repeat(3,1fr);}
     .nav-logo img{height:48px;}
+    .nav-inner{justify-content:space-between;}
+    .nav-serving{display:inline-flex;}
   }
 </style>
 </head>
@@ -456,8 +474,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav" id="siteNav">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="DaBella Home">
-      <img src="assets/logo-white.png" alt="DaBella logo">
+      <img src="assets/logo-color.svg" alt="DaBella logo">
     </a>
+    <div class="nav-serving">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Serving Over 50 Million Homeowners
+    </div>
     <a href="#leadFormCard" class="nav-cta">Free Estimate</a>
   </div>
 </nav>
