@@ -142,31 +142,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding:22px 20px 26px;
     box-shadow:0 18px 40px rgba(0,0,0,.25);
   }
-  .form-progress{margin-bottom:16px;}
-  .form-progress-label{
-    display:flex;justify-content:space-between;
-    font-size:12.5px;font-weight:700;color:var(--primary);margin-bottom:6px;
-  }
-  .progress-bar{
-    height:6px;background:var(--line);border-radius:999px;overflow:hidden;
-  }
-  .progress-fill{
-    height:100%;background:var(--accent);border-radius:999px;
-    transition:width .3s ease;
-  }
-  .back-btn{
-    display:none;
-    align-items:center;gap:4px;
-    background:none;border:none;
-    color:var(--gray);font-size:13px;font-weight:700;
-    padding:0;margin-bottom:12px;cursor:pointer;
-    font-family:inherit;
-  }
-  .back-btn.visible{display:flex;}
-  .step-panel{display:none;}
-  .step-panel.active{display:block;}
-  .step4-head{
-    font-weight:700;font-size:15px;margin-bottom:14px;color:var(--ink);
+  .form-top-sub{
+    font-size:14px;color:var(--gray);text-align:center;margin-bottom:4px;
   }
   .field-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   .field-row2 .field label{
@@ -202,12 +179,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .form-thankyou h2{font-size:22px;color:var(--primary);margin-bottom:8px;}
   .form-thankyou p{font-size:14.5px;color:var(--gray);}
   .form-card h2{
-    font-size:21px;
+    font-size:22px;
     color:var(--primary);
-    margin-bottom:4px;
-  }
-  .form-card .form-sub{
-    font-size:14px;color:var(--gray);margin-bottom:16px;
+    margin-bottom:14px;
+    text-align:center;
   }
   .field{margin-bottom:16px;}
   fieldset.field{border:none;padding:0;margin:0 0 16px;}
@@ -241,11 +216,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background:#fff;
     min-height:48px;
   }
+  .tcpa-text{
+    font-size:11.5px;color:var(--gray);line-height:1.55;margin-bottom:12px;
+  }
   .cta-btn{
     display:block;
     width:100%;
-    background:var(--accent);
-    color:var(--primary);
+    background:#F26522;
+    color:#fff;
     font-family:'Barlow Condensed',sans-serif;
     font-weight:800;
     text-transform:uppercase;
@@ -256,8 +234,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding:17px 18px;
     min-height:54px;
     cursor:pointer;
-    margin-top:6px;
-    box-shadow:0 8px 18px rgba(175,225,46,.35);
+    margin-top:0;
+    box-shadow:0 8px 18px rgba(242,101,34,.35);
     transition:transform .1s ease;
   }
   .cta-btn:hover{transform:translateY(-1px);}
@@ -521,93 +499,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="form-card" id="leadFormCard">
-      <div class="form-progress">
-        <div class="form-progress-label">
-          <span id="stepLabel">Step 1 of 4</span>
-          <span id="stepPercent">25%</span>
-        </div>
-        <div class="progress-bar"><div class="progress-fill" id="formProgressFill" style="width:25%"></div></div>
-      </div>
-
-      <h2>Tell Us About Your Project</h2>
-      <p class="form-sub">Takes less than 60 seconds.</p>
-
-      <button type="button" id="backBtn" class="back-btn" aria-label="Go back to previous question">&larr; Back</button>
+      <p class="form-top-sub">Stress-Free Window Replacement... Done Right!</p>
+      <h2>Get Your Free Window Estimate</h2>
 
       <form id="leadForm">
-        <div class="step-panel active" data-step="1">
-          <fieldset class="field">
-            <legend class="q">Are you a homeowner?</legend>
-            <div class="options">
-              <label class="opt"><input type="radio" name="homeowner" value="Yes" required><span>Yes</span></label>
-              <label class="opt"><input type="radio" name="homeowner" value="No"><span>No</span></label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="step-panel" data-step="2">
-          <fieldset class="field">
-            <legend class="q">How many windows are you replacing?</legend>
-            <div class="options">
-              <label class="opt"><input type="radio" name="productType" value="1-3" required><span>1-3</span></label>
-              <label class="opt"><input type="radio" name="productType" value="4-6"><span>4-6</span></label>
-              <label class="opt"><input type="radio" name="productType" value="Entire Home"><span>Entire Home</span></label>
-              <label class="opt"><input type="radio" name="productType" value="Not Sure"><span>I'm Not Sure</span></label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="step-panel" data-step="3">
-          <fieldset class="field">
-            <legend class="q">How soon are you looking to replace your windows?</legend>
-            <div class="options">
-              <label class="opt"><input type="radio" name="timeline" value="ASAP" required><span>As Soon As Possible</span></label>
-              <label class="opt"><input type="radio" name="timeline" value="1-3 Months"><span>Within 1–3 Months</span></label>
-              <label class="opt"><input type="radio" name="timeline" value="Just Researching"><span>Just Researching For Now</span></label>
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="step-panel" data-step="4">
-          <p class="q step4-head">Where should we send your quote?</p>
-          <div class="field-row2">
-            <div class="field">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
-            </div>
-            <div class="field">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
-            </div>
+        <div class="field-row2">
+          <div class="field">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required autocomplete="given-name">
           </div>
           <div class="field">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required autocomplete="family-name">
+          </div>
+        </div>
+        <div class="field">
+          <input type="email" id="email" name="email" placeholder="Email Address *" required autocomplete="email">
+        </div>
+        <div class="field-row2">
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required autocomplete="tel">
           </div>
           <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="text" id="zip" name="zip" placeholder="Zip Code *" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code">
           </div>
-          <div class="field">
-            <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="12345">
-          </div>
+        </div>
 
-          <button type="submit" class="cta-btn">Get My Free Price Estimate &rarr;</button>
-          <div class="micro-trust">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            No commitment. 100% confidential.
-          </div>
+        <p class="tcpa-text">By clicking Get Your Free Estimate, I am providing my E-Sign signature and express written consent for DaBella to contact me at the telephone number provided above to arrange a convenient in-home consultation and for marketing purposes related to home remodeling services, including through the use of automated dialing technology, SMS/MMS messages, AI generative voice, and prerecorded and/or artificial voice messages, even if my number is currently listed on any state, federal or internal Do Not Call list. Message and data rates may apply. I understand that consent is not a condition of purchase.</p>
+
+        <button type="submit" class="cta-btn">Get Your Free Estimate</button>
+        <div class="micro-trust">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Safe, Secure, and Confidential
         </div>
       </form>
-
-      <div id="formThankyou" class="form-thankyou">
-        <div class="check">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <h2>You're All Set!</h2>
-        <p>Thanks for reaching out. A DaBella windows specialist will contact you within 24 hours with your free quote.</p>
-      </div>
     </div>
   </div>
 </header>
@@ -804,67 +727,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  // Multi-step lead form (single page, no redirect)
-  (function(){
-    var totalSteps = 4;
-    var currentStep = 1;
-    var form = document.getElementById('leadForm');
-    var panels = form.querySelectorAll('.step-panel');
-    var stepLabel = document.getElementById('stepLabel');
-    var stepPercent = document.getElementById('stepPercent');
-    var progressFill = document.getElementById('formProgressFill');
-    var backBtn = document.getElementById('backBtn');
-    var thankyou = document.getElementById('formThankyou');
-
-    function showStep(n){
-      currentStep = n;
-      panels.forEach(function(panel){
-        panel.classList.toggle('active', parseInt(panel.dataset.step) === n);
-      });
-      var pct = (n === totalSteps) ? 90 : Math.round((n / totalSteps) * 100);
-      stepLabel.textContent = 'Step ' + n + ' of ' + totalSteps;
-      stepPercent.textContent = pct + '%';
-      progressFill.style.width = pct + '%';
-      backBtn.classList.toggle('visible', n > 1);
-    }
-
-    function panelFor(n){
-      return form.querySelector('.step-panel[data-step="' + n + '"]');
-    }
-
-    // Auto-advance on radio selection for steps 1-3
-    [1,2,3].forEach(function(n){
-      panelFor(n).querySelectorAll('input[type="radio"]').forEach(function(input){
-        input.addEventListener('change', function(){
-          setTimeout(function(){ showStep(n + 1); }, 200);
-        });
-      });
-    });
-
-    backBtn.addEventListener('click', function(){
-      if(currentStep > 1){
-        var prevStep = currentStep - 1;
-        panelFor(prevStep).querySelectorAll('input[type="radio"]:checked').forEach(function(input){
-          input.checked = false;
-        });
-        showStep(prevStep);
-      }
-    });
-
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      if(!form.checkValidity()){
-        form.reportValidity();
-        return;
-      }
-      form.style.display = 'none';
-      backBtn.classList.remove('visible');
-      thankyou.style.display = 'block';
-      document.getElementById('leadFormCard').scrollIntoView({behavior:'smooth', block:'start'});
-    });
-
-    showStep(1);
-  })();
+  // Lead form — submit redirects to thank-you page
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!this.checkValidity()){ this.reportValidity(); return; }
+    window.location.href = 'thank-you.html';
+  });
 </script>
 
 </body>
